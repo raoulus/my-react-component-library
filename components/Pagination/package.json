@@ -1,0 +1,28 @@
+{
+  "name": "pagination",
+  "version": "1.0.0-alpha.1",
+  "description": "## Documentation",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "tests"
+  },
+  "contributors": [
+    {
+      "name": "Raoul Jaeckel",
+      "email": "xxx@xxx.com"
+    }
+  ],
+  "liveExamples": {
+    "xxx": "https://xxx.com"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require ../../test-setup.js --require babel-polyfill --require ignore-styles test/*.spec.js",
+    "test:watch": "mocha --compilers js:babel-core/register --require ../../test-setup.js --require babel-polyfill --require ignore-styles --watch test/*.spec.js"
+  },
+  "author": "",
+  "license": "TBD",
+  "devDependencies": {
+    "mocha": "3.2.0"
+  }
+}

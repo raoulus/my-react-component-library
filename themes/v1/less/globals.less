@@ -1,0 +1,25 @@
+@import "colors.less";
+@import "font-mixins.less";
+
+html,
+body,
+.full-height,
+.application-container,
+.application-container > .entry-factory,
+.page-wrapper {
+  min-height: 100%;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  .font-regular();
+  font-size: 16px;
+  line-height: 22px;
+  color: @color-text;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
