@@ -1,0 +1,52 @@
+image: mcasimir/dind-node-build-runner:v6.9.1
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - export NPM_PACKAGE_VERSION="$(cat package.json | grep version | head -1 | awk '-F:' '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]' | sed 's/-dev$//')"
+  - export CI_BUILD_REF_SHORT="$(echo $CI_BUILD_REF | cut -c1-8)"
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm run test:ci
+  except:
+    - master
+    - tags
+    - /^support\/.*$/
+  tags:
+    - docker
+    - local
+
+build_and_push_image:
+  stage: build
+  script:
+    - npm install
+    - npm run build:demo
+    - docker build --tag "rjaeckel/styleguide:$NPM_PACKAGE_VERSION-dev.$CI_PIPELINE_ID" .
+    - docker push "rjaeckel/styleguide:$NPM_PACKAGE_VERSION-dev.$CI_PIPELINE_ID"
+  only:
+    - development
+  tags:
+    - docker
+    - local
+
+deploy:
+  stage: deploy
+  environment: integration
+  script:
+    - "do something!"
+  only:
+    - development
+  except:
+    - tags
+  tags:
+    - deploy
