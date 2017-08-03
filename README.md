@@ -21,7 +21,8 @@ npm i my-react-component-library -S -E
 ```
 <br>
 Update your webpack configuration in order to load the components and styles in your source files from the `node_modules` folder.
-```js
+
+```javascript
 // webpack.config.js
 resolve: {
   modules: [
