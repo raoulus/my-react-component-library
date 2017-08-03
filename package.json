@@ -1,8 +1,12 @@
 {
   "name": "my-react-component-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A monorepo for your own react modules including a styleguide. Easy to maintain and distribute.",
   "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/raoulus/my-react-component-library.git"
+  },
   "scripts": {
     "create:component": "bash scripts/create-component.sh",
     "dev:livereload": "livereload demo/public -w 1000",
