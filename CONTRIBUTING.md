@@ -75,5 +75,5 @@ We use [lerna](https://github.com/lerna/lerna) to publish components to the regi
 2. Create a release branch from development
   - `npm run release start` creates release branch and generates changelog
 3. Bump package versions
-  - `npm run publish` bumps the version, publishes the updated packages to the registry and creates and pushes a git tag
+  - `npm run publish:components` bumps the version, publishes the updated packages to the registry and creates and pushes a git tag
 6. Merge release branch to master and development

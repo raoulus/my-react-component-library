@@ -18,7 +18,7 @@
     "release:build": "npm run lint && npm run release:build:css",
     "release:build:demo": "NODE_ENV=production webpack --config demo/webpack.config.js -p --profile",
     "release:build:css": "bash scripts/compile-less-themes.sh",
-    "publish": "lerna publish --skip-npm"
+    "publish:components": "lerna publish --skip-npm"
   },
   "author": "Raoul Jaeckel",
   "license": "TBD",
