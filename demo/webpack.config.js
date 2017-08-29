@@ -33,8 +33,11 @@ let entry = {
 const componentFolder = path.resolve('components');
 const components = fs.readdirSync(componentFolder);
 components.forEach((component) => {
+  if (component === '.DS_Store') return;
   entry[component] = [`./components/${component}/index.js`];
 });
+
+console.log(components);
 
 module.exports = {
   resolve: {

@@ -4,8 +4,8 @@
   "description": "A monorepo for your own react modules including a styleguide. Easy to maintain and distribute.",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/raoulus/my-react-component-library.git"
+    "type": "git",
+    "url": "https://github.com/raoulus/my-react-component-library.git"
   },
   "scripts": {
     "create:component": "bash scripts/create-component.sh",
@@ -51,7 +51,7 @@
     "eslint-plugin-babel": "3.3.0",
     "eslint-plugin-mocha": "4.7.0",
     "eslint-plugin-react": "6.4.1",
-    "expose-loader": "git+https://github.com/webpack/expose-loader#ef1848b45ad0362c20aab746cbaa6ef582e392a5",
+    "expose-loader": "webpack-contrib/expose-loader#17/head",
     "express": "4.14.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",

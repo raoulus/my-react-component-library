@@ -70,6 +70,9 @@ import Pagination from 'styleguide-v1/components/Pagination';
 
 ### Commands
 ```
+# Install dependencies
+yarn install (use yarn for now, as npm has an issue installing from a pull request)
+
 # Start demo
 npm start
 
